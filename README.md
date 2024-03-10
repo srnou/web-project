@@ -1,1 +1,6 @@
-this is web project
+# Web programming project
+
+## Student
+- Lejla Srna (@srnou https://github.com/srnou)
+  
+## Project description
