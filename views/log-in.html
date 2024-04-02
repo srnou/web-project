@@ -1,0 +1,64 @@
+    <!-- Header -->
+    <header class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h1 class="text-center">Log In</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+       
+       <!-- Basic -->
+        <div class="ex-form-1 pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 offset-xl-3">
+                        <div class="text-box mt-5 mb-5">
+                            <p class="mb-4">You don't have an account? Then please <a class="blue" href="#signup">SIGN UP</a></p>
+
+                            <!-- Log In Form -->
+                            <form id="loginForm">
+                                <div class="mb-4 form-floating">
+                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                    <label for="floatingInput">Email address</label>
+                                </div>
+                                <div class="mb-4 form-floating">
+                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+
+                                <div class="mb-4 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">I agree with the site's stated Privacy Policy and Terms & Conditions</a></label>
+                                </div>
+                                <button type="submit" class="form-control-submit-button">Log in</button>
+                            </form>
+                            <!-- end of log in form -->
+
+                        </div> <!-- end of text-box -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of ex-basic-1 -->
+        <!-- end of basic -->
+            
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent the actual form submission
+        window.location.href = 'profile.html'; // Redirect to profile page
+    });
+});
+
+        </script>
+
+<script>
+    $(document).ready(function() {
+        $('#loginForm').submit(function(e) {
+            e.preventDefault(); // Prevent the actual form submission
+            // Here you can handle the login logic or redirection to profile
+        });
+    });
+</script>

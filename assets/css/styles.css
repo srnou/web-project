@@ -31,6 +31,16 @@ Colors:
 /**************************/
 /*     General Styles     */
 /**************************/
+
+ .image-container {
+    max-width: 100%;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
 body,
 html {
     width: 100%;
@@ -336,7 +346,7 @@ a:hover {
 /*     Navigation     */
 /**********************/
 .navbar {
-	background-color: #272556;
+	background-color: #fff2dc;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0.875rem;
@@ -526,16 +536,14 @@ a:hover {
     font-size: 2.5rem; /* Adjust the font size as needed */
     font-weight: bold;
     text-align: center;
-    margin-bottom: 30px; /* Adjust the margin-bottom as needed */
+    margin-bottom: -700px; /* Adjust the margin-bottom as needed */
 }
 
 
 /*****************/
  /* Cards */
 
- .book-cards {
-    padding: 50px 0; /* Adjust the padding as needed */
-}
+
 
 /* Book Card Styles */
 .book-card {
@@ -602,7 +610,7 @@ a:hover {
 /* Hover Effect */
 .book-card:hover .overlay,
 .book-card:hover .book-details {
-    opacity: 30;
+    opacity: 50;
 }
 
 
@@ -1024,6 +1032,7 @@ a:hover {
 	/* General Styles */
 	.container {
 		max-width: 1140px;
+		
 	}
 	/* end of general styles */
 	
@@ -1033,6 +1042,7 @@ a:hover {
 		overflow: hidden;
 		padding-top: 18.5rem;
 		padding-bottom: 5px;
+		
 	}
 
 	.header .image-container {

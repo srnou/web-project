@@ -1,0 +1,72 @@
+
+        <div class="profile-page">
+            <header class="profile-header">
+                <div class="user-info">
+                    <img src="assets/images/slika.jpg" alt="User Profile Picture" class="profile-pic">
+                    <h1>Lejla Srna</h1>
+                    <h2>Web Developer</h2>
+                </div>
+            </header>
+            
+            <main class="profile-content">
+                <section class="books-section">
+                    <div class="books-want-to-read">
+                        <h3>Books I Want to Read</h3>
+                        <!-- Dynamically add books here -->
+                    </div>
+    
+                    <div class="books-read">
+                        <h3>Books I've Read</h3>
+                        <!-- Dynamically add books here -->
+                    </div>
+                </section>
+                
+                <!-- Monthly Statistics Section -->
+                <section class="statistics-section">
+                    <h3>Monthly Reading Statistics</h3>
+                    <canvas id="readingStatsChart"></canvas>
+                </section>
+            </main>
+        </div>
+        
+        <script>
+          const ctx = document.getElementById('readingStatsChart').getContext('2d');
+          const readingStatsChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                  labels: ['January', 'February', 'March', 'April', 'May'],
+                  datasets: [{
+                      label: 'Books Read',
+                      data: [5, 9, 3, 5, 2],
+                      backgroundColor: [
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(54, 162, 235, 0.2)',
+                          'rgba(255, 206, 86, 0.2)',
+                          'rgba(75, 192, 192, 0.2)',
+                          'rgba(153, 102, 255, 0.2)'
+                      ],
+                      borderColor: [
+                          'rgba(255, 99, 132, 1)',
+                          'rgba(54, 162, 235, 1)',
+                          'rgba(255, 206, 86, 1)',
+                          'rgba(75, 192, 192, 1)',
+                          'rgba(153, 102, 255, 1)'
+                      ],
+                      borderWidth: 1
+                  }]
+              },
+              options: {
+                  scales: {
+                      y: {
+                          beginAtZero: true
+                      }
+                  }
+              }
+          });
+        </script>
+
+
+</body>
+</html>
+
+        
