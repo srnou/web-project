@@ -1,0 +1,114 @@
+
+        <div class="book-detail-container">
+            <div class="book-cover">
+                <img src="" alt="Book Cover" class="cover-image">
+            </div>
+            <div class="book-info">
+                <h1 class="book-title"></h1>
+                <p class="author"></p>
+                <p class="isbn"></p>
+                <p class="description"></p>
+                <div class="actions">
+                    <button class="btn-buy">I READ IT</button>
+                    <button class="btn-wishlist">WANT TO READ</button>
+                </div>
+            </div>
+        
+    
+        <div class="comment-section">
+            <h2>Comments</h2>
+            <form class="comment-form">
+                <input type="text" id="comment-name" placeholder="Your Name" required>
+                <textarea id="comment-message" placeholder="Your Message" required></textarea>
+                <select id="comment-rating">
+                    <option value="">Rate the Book</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+            <ul class="comment-list">
+                <!-- Comments will be dynamically added here -->
+            </ul>
+        </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              const urlParams = new URLSearchParams(window.location.search);
+              const bookId = urlParams.get('book');
+      
+              // Example book details stored in an object
+              function displayBookDetails(bookId) {
+              const bookDetails = {
+                'book1': {
+                  title: "BLANK",
+                  author: "by Fedja Stukan",
+                  isbn: "ISBN: 123-4567890123",
+                  description: "A novel about life and death, politics and religion, hate and love. Blank is the first book by Sarajevo actor Feđa Štukan. The novel was seven years in the making, and it begins with the dreams of a boy who only wanted to become a pilot. In Blanka, Feđa Štukan flew, fell, survived at least 10 circles of hell before catharsis and a new beginning.",
+                  coverImage: "assets/images/book1.jpg"
+                },
+                'book2': {
+                  title: "KRALJEVI I KRALJICE BOSNE",
+                  author: "by Emir Durvisevic",
+                  isbn: "ISBN: 123-4567890123",
+                  description: "A novel about life and death, politics and religion, hate and love. Blank is the first book by Sarajevo actor Feđa Štukan. The novel was seven years in the making, and it begins with the dreams of a boy who only wanted to become a pilot. In Blanka, Feđa Štukan flew, fell, survived at least 10 circles of hell before catharsis and a new beginning.",
+                  coverImage: "assets/images/book2.jpg"
+                },
+                'book3': {
+                  title: "ARSEN COVJEK KAO ON",
+                  author: "by Emir Durvisevic",
+                  isbn: "ISBN: 123-4567890123",
+                  description: "A novel about life and death, politics and religion, hate and love. Blank is the first book by Sarajevo actor Feđa Štukan. The novel was seven years in the making, and it begins with the dreams of a boy who only wanted to become a pilot. In Blanka, Feđa Štukan flew, fell, survived at least 10 circles of hell before catharsis and a new beginning.",
+                  coverImage: "assets/images/book3.jpg"
+                },
+                'book4': {
+                  title: "NARANDZA S TREBEVICA",
+                  author: "by Ezudin Kurtovic",
+                  isbn: "ISBN: 123-4567890123",
+                  description: "A novel about life and death, politics and religion, hate and love. Blank is the first book by Sarajevo actor Feđa Štukan. The novel was seven years in the making, and it begins with the dreams of a boy who only wanted to become a pilot. In Blanka, Feđa Štukan flew, fell, survived at least 10 circles of hell before catharsis and a new beginning.",
+                  coverImage: "assets/images/book6.jpg"
+                },
+                'book5': {
+                  title: "SARAJEVO U BASESKIJINO DOBA",
+                  author: "by Kerima Filan",
+                  isbn: "ISBN: 123-4567890123",
+                  description: "By researching the Turkish language in the work written by Mula Mustafa Bašeski in the form of a diary in Sarajevo in the 18th century, we tried to get to the writer's attitudes, attitudes towards life, towards people and some characteristics of the world in which he lived.",
+                  coverImage: "assets/images/book7.jpg"
+                },
+                'book6': {
+                  title: "PUTOVANJA U TISINU",
+                  author: "by Ibrahim Efendic",
+                  isbn: "ISBN: 123-4567890123",
+                  description: "A novel about life and death, politics and religion, hate and love. Blank is the first book by Sarajevo actor Feđa Štukan. The novel was seven years in the making, and it begins with the dreams of a boy who only wanted to become a pilot. In Blanka, Feđa Štukan flew, fell, survived at least 10 circles of hell before catharsis and a new beginning.",
+                  coverImage: "assets/images/book9.jpg"
+                },
+            };
+            };
+      
+              if (bookDetails[bookId]) {
+                document.querySelector('.book-title').textContent = bookDetails[bookId].title;
+                document.querySelector('.author').textContent = bookDetails[bookId].author;
+                document.querySelector('.isbn').textContent = bookDetails[bookId].isbn;
+                document.querySelector('.description').textContent = bookDetails[bookId].description;
+                document.querySelector('.cover-image').src = bookDetails[bookId].coverImage;
+                document.querySelector('.cover-image').alt = `Cover of ${bookDetails[bookId].title}`;
+              } else {
+                // Handle the case where the book ID is not found
+                $('#book-detail').html('<p>Book details not found.</p>');
+              }
+            });
+
+       
+
+
+
+
+
+
+
+          </script>
+
