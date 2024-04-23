@@ -42,6 +42,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#books">BOOKS</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="crud.html">CRUD DATA TEST</a>
                     <span class="nav-item">
                         <a class="btn-outline-sm" href="#login">Log in</a>
                     </span>
@@ -55,6 +57,7 @@
     <main id="spapp" role="main">
         <section id="home" href="views/home.html"></section>
         <section id="books" data-load="views/books.html"></section>
+        <section id="crud" data-load="crud.html"></section>
         <section id="login" data-load="views/log-in.html"></section>
         <section id="signup" data-load="views/sign-up.html"></section>
         <section id="book-detail" data-load="views/book-detail.html" style="display: none;"></section>
@@ -130,6 +133,10 @@
             app.route({
                 view: "books",
                 load: "books.html"
+            });
+            app.route({
+                view: "crud",
+                load: "crud.html"
             });
             app.route({
                 view: "login",
